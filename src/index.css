@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Vazirmatn", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Vazirmatn", ui-monospace, SFMono-Regular, monospace;
+}
+
+body, input, select, textarea, button {
+  font-family: var(--font-sans) !important;
+}
+
+body {
+  background-color: #f8fafc;
+}
+
+/* Hide scrollbars globally for cleaner mobile web app look */
+* {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+*::-webkit-scrollbar {
+  display: none; /* WebKit (Safari, Chrome, etc) */
+}

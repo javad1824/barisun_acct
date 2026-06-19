@@ -1,0 +1,6 @@
+{
+  "name": "حسابداری کامیونداران",
+  "description": "سامانه مدیریت مشتریان و حسابداری هوشمند رانندگان کامیون با قابلیت صدور فاکتور خودکار ماهانه، یادآور سررسید پرداخت و بک‌آپ‌گیری داده‌ها.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
