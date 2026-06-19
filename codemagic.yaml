@@ -1,0 +1,27 @@
+workflows:
+  capacitor-android-build:
+    name: Build Capacitor Android App
+    environment:
+      node: latest
+      java: 17
+    triggering:
+      events:
+        - push
+      branch_patterns:
+        - pattern: main
+          include: true
+          source: true
+    scripts:
+      - name: Install npm dependencies
+        script: npm install
+      - name: Build Vite web app
+        script: npm run build
+      - name: Sync Capacitor with Android
+        script: npx cap sync android
+      - name: Build Android Debug APK
+        script: |
+          cd android
+          chmod +x ./gradlew
+          ./gradlew assembleDebug
+    artifacts:
+      - android/app/build/outputs/apk/**/*.apk
